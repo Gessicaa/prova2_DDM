@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>NovoUsuarioModal</ion-title>
+  </ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button href="/home">Voltar</ion-button>
+  </ion-buttons>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Nome:</ion-label>
+      <ion-input [(ngModel)]="novo_perfil.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <img src="{{novo_usuario.imagem}" alt="">
+      <ion-button expand="full" (click)="take_picture()">
+        <ion-icon name="camera"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-button expand="full" (click)="add()">Enviar</ion-button>
+
+  </ion-list>
+  
+</ion-content>

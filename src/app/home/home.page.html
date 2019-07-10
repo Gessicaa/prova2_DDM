@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Olá
+    </ion-title>
+    <ion-fab href="/home/lista-pedido/" class="button-native" vertical="bottom" horizontal="end">
+      <ion-fab-button>
+        <ion-icon name="apps"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let usuario of novo_usuarios">
+    <ion-card-header>
+      <ion-card-title>{{novo_usuario.nome}}</ion-card-title>
+      <img src="{{novo_usuario.imagem}}" alt="Imagem">
+    </ion-card-header>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="abrir_modal()">
+          <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-card>
+</ion-content>

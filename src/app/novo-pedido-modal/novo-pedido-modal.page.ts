@@ -1,0 +1,27 @@
+import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+
+@Component({
+  selector: 'app-novo-pedido-modal',
+  templateUrl: './novo-pedido-modal.page.html',
+  styleUrls: ['./novo-pedido-modal.page.scss'],
+})
+export class NovoPedidoModalPage implements OnInit {
+
+  constructor(public modalController: ModalController,) { }
+  
+  ngOnInit() {
+  }
+
+  novo_pedido = {
+    "prato":"",
+    "data":"",
+    "tamanho":"",
+    "valor":""
+  }
+  
+  add() {
+    this.modalController.dismiss(this.novo_pedido);
+  }
+
+}
