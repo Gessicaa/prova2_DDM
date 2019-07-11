@@ -31,7 +31,7 @@ export class HomePage {
     });
 
     modal.onDidDismiss().then((usuario) => {
-      this.add(usuario);
+      this.add(usuario.data);
     });
 
     await modal.present();

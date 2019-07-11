@@ -10,5 +10,10 @@ export class PedidoService {
 
   constructor(private http: HttpClient) { }
 
+  list() {
+    return this.http.get(this.URL_BASE);
+  }
+
+  
   
 }

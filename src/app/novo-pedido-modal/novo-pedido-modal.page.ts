@@ -10,15 +10,16 @@ export class NovoPedidoModalPage implements OnInit {
 
   constructor(public modalController: ModalController,) { }
   
-  ngOnInit() {
-  }
-
   novo_pedido = {
     "prato":"",
     "data":"",
     "tamanho":"",
     "valor":""
   }
+  
+  ngOnInit() {
+  }
+
   
   add() {
     this.modalController.dismiss(this.novo_pedido);
